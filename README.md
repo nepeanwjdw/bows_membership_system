@@ -1,5 +1,12 @@
 # bows_membership_system
 Design and Build a RESTful API membership card system
+## Assumptions
+* Functionality for viewing and purchasing goods will be implemented separately
+* Employee IDs are numerical and 4-byte integer is sufficient to represent them
+* Users only have one card (at a time)
+* Users may need to update their card id, for example to replace a lost card
+* Users do not have a separate username to their employee id, will be used as a username
+* The pin number will be used to login
 ## Designs
 ### Use Cases
 ![Use Cases](./designs/use_cases.png)
