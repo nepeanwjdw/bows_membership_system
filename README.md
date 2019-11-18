@@ -23,3 +23,10 @@ The transaction type will be stored as two characters. Top ups will be stored as
 ### Sequence Diagram
 ![Sequence Diagram](./designs/sequence_diagram.png)
 This diagram shows how the registered user interacts with the kiosk to perform the tasks of logging in and out. A limitation of this design is that it doesn't show registering a new user.
+## APIs
+This table will be updated throughout the development of the project to show the catalogue of APIs available to call.
+
+HTTP Method | Action | Examples
+--- | --- | ---
+GET | Retrieve user's name | /api/v1/getname
+POST | Login  | /api/v1/rest-auth/login
