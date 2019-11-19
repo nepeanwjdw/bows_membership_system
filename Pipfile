@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 django = {extras = ["argon2"],version = "*"}
 psycopg2 = "==2.7.5"
+djangorestframework = "*"
 
 [requires]
 python_version = "3.7"
