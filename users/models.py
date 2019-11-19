@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 
-class User(AbstractUser):
+class Employee(AbstractUser):
     id = models.IntegerField(primary_key=True)
     card_id = models.CharField(max_length=16, unique=True)
     balance = models.DecimalField(max_digits=5, decimal_places=2, default=0.00)
