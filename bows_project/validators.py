@@ -5,8 +5,8 @@ from django.utils.translation import ugettext as _
 
 
 class FourDigitsValidator(object):
-    def validate(self, pin, user=None):
-        if not re.findall('\d{4}', pin):
+    def validate(self, password, user=None):
+        if not re.findall('^\d{4}$', password):
             raise ValidationError(
                 _("The pin must contain four digits, 0-9."),
                 code='pin_not_four_digits',
