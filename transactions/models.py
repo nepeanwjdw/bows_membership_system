@@ -17,4 +17,4 @@ class Transaction(models.Model):
 
     def __str__(self):
         """Returns the transaction amount"""
-        return self.amount
+        return '%s' % self.id

@@ -46,7 +46,7 @@ class Employee(AbstractUser):
 
     def __str__(self):
         """Returns the user's full name."""
-        return '%s %s' % (self.first_name, self.last_name)
+        return 'ID: %s Name: %s %s' % (self.id, self.first_name, self.last_name)
 
     def balance(self):
         """Returns the user's balance"""
