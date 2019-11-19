@@ -5,8 +5,11 @@ Design and Build a RESTful API membership card system
 * Employee IDs are numerical and 4-byte integer is sufficient to represent them
 * Users only have one card (at a time)
 * Users may need to update their card id, for example to replace a lost card
-* Users do not have a separate username to their employee id, will be used as a username
+* Registering a new card with user details that already exist will overwrite the currently stored card number
+* Users do not have a separate username to their employee id so this will be used as a username
 * The pin number will be used to login
+* When a User record is deleted, all associated Transaction records will also need be deleted
+* As the User table will not story a history of previous cards, the Transaction table will need to store the card number used which will not be updated when a user updated their card number
 ## Designs
 ### Use Cases
 ![Use Cases](./designs/use_cases.png)
