@@ -3,10 +3,11 @@ from django.contrib.auth.models import AbstractUser
 
 
 class Employee(AbstractUser):
-    id = models.IntegerField(primary_key=True)
+    id = models.IntegerField(primary_key=True, unique=True)
     card_id = models.CharField(max_length=16, unique=True)
     balance = models.DecimalField(max_digits=5, decimal_places=2, default=0.00)
     mobile_number = models.CharField(max_length=30)
+    username = None
 
     USERNAME_FIELD = 'id'
     REQUIRED_FIELDS = ['card_id']
