@@ -1,10 +1,15 @@
 from rest_framework import generics
-
-from users import models
+from users.models import Employee
 from . import serializers
 
 
 class RetrieveEmployee(generics.RetrieveAPIView):
-    queryset = models.Employee.objects.all()
+    queryset = Employee.objects.all()
     serializer_class = serializers.EmployeeSerializer
     lookup_field = 'card_id'
+
+
+class TopUpBalance(generics.UpdateAPIView):
+    queryset = Employee.objects.all()
+    serializer_class = serializers.EmployeeSerializer
+    lookup_field = 'id'
