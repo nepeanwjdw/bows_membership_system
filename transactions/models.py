@@ -16,5 +16,5 @@ class Transaction(models.Model):
     date_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        """Returns the transaction amount"""
+        """Returns the transaction id"""
         return '%s' % self.id
