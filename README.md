@@ -45,7 +45,7 @@ PUT/PATCH | Top Up | Yes | /api/v1/users/top-up/\<id>
 POST | Logout | Yes | /api/v1/users/logout
 
 Where the following consists of:
-* `<card-id>`: 16 alphanumeric characters e.g. r7jTG7dqBy5wGO4L
-* `<id>`: six digits  e.g. 532752
+* \<card-id>: 16 alphanumeric characters e.g. r7jTG7dqBy5wGO4L
+* \<id>: six digits  e.g. 532752
 
 An example of using an authentication token in a curl command: `-H "Authorization: Token f7d5450f2a81be4dd01a2388120b9e48289f740a"`
