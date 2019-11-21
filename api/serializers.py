@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from users.models import Employee
+from rest_auth.serializers import LoginSerializer
 
 
 class EmployeeSerializer(serializers.ModelSerializer):
@@ -29,3 +30,10 @@ class TopUpSerializer(serializers.Serializer):
         instance.balance += amount
         instance.save()
         return instance
+
+
+class CustomLoginSerializer(LoginSerializer):
+    email = None
+
+    class Meta:
+        model = Employee
