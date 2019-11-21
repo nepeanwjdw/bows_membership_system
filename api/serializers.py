@@ -33,6 +33,7 @@ class TopUpSerializer(serializers.Serializer):
 
 
 class CustomLoginSerializer(LoginSerializer):
+    username = serializers.IntegerField(required=True, allow_null=False)
     email = None
 
     class Meta:
