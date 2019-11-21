@@ -11,5 +11,5 @@ class RetrieveEmployee(generics.RetrieveAPIView):
 
 class TopUpBalance(generics.UpdateAPIView):
     queryset = Employee.objects.all()
-    serializer_class = serializers.EmployeeSerializer
+    serializer_class = serializers.TopUpSerializer
     lookup_field = 'id'
