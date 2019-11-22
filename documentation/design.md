@@ -11,10 +11,10 @@
 * As the User table will not story a history of previous cards, the Transaction table will need to store the card number used which will not be updated when a user updated their card number
 ## Designs
 ### Use Cases
-![Use Cases](./designs/use_cases.png)
+![Use Cases](use_cases.png)
 Before a user can perform any tasks, they must first register their card. Registered users can top up their cards, login and logout. The system will be used to view and purchase goods, however that is outside the scope of this project.
 ### Data Model
-![Data Model](./designs/data_model.png)
+![Data Model](data_model.png)
 #### User Table
 The User table allows an employee to register their card on the system and to top up their balance.
 
@@ -30,5 +30,5 @@ There is a one-to-many relationship to this table, allowing a single user can be
 
 The transaction type will be stored as two characters. Top ups will be stored as 'TU' and purchases will be stored as 'PU'.
 ### Sequence Diagram
-![Sequence Diagram](./designs/sequence_diagram.png)
+![Sequence Diagram](sequence_diagram.png)
 This diagram shows how the registered user interacts with the kiosk to perform the tasks of logging in and out. A limitation of this design is that it doesn't show registering a new user.

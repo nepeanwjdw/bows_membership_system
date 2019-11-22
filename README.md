@@ -2,6 +2,6 @@
 Design and Build a RESTful API membership card system
 
 #### Navigation
-* [Designing the Project](./designs)
-* [Limitations and Future Improvements](./limitations.md)
-* [User Guide](./user_guide.md)
+* [Designing the Project](documentation/design.md)
+* [User Guide](documentation/user_guide.md)
+* [Limitations and Future Improvements](documentation/limitations.md)

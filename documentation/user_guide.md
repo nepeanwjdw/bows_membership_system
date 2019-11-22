@@ -5,10 +5,11 @@ This table will be updated throughout the development of the project to show the
 
 HTTP Method | Action | Requires Token | Path
 --- | --- | --- | ---
-GET | Retrieve user's name | No | /api/v1/users/get-id/\<card-id>
+GET | Retrieve user's id and name | No | /api/v1/users/get-id/\<card-id>
 POST | Login  | No | /api/v1/users/login
+GET | Get user's details | Yes | /api/v1/users/get-details/\<user-id>
 POST | Register | No | /api/v1/users/register
-PUT/PATCH | Top Up | Yes | /api/v1/users/top-up/\<id>
+PUT/PATCH | Top Up | Yes | /api/v1/users/top-up/\<user-id>
 POST | Logout | Yes | /api/v1/users/logout
 
 Where the following consists of:
