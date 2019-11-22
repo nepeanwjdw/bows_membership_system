@@ -15,3 +15,9 @@ class TopUpView(generics.UpdateAPIView):
     queryset = Employee.objects.all()
     serializer_class = serializers.TopUpSerializer
     lookup_field = 'id'
+
+
+class EmployeeDetailsView(generics.RetrieveAPIView):
+    queryset = Employee.objects.all()
+    serializer_class = serializers.EmployeeDetailsSerializer
+    lookup_field = 'id'

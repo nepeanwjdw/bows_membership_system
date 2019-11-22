@@ -20,6 +20,12 @@ class EmployeeNameSerializer(serializers.ModelSerializer):
         return user
 
 
+class EmployeeDetailsSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = ('id', 'first_name', 'last_name', 'balance', 'last_login')
+        model = Employee
+
+
 class TopUpSerializer(serializers.ModelSerializer):
     amount = serializers.DecimalField(write_only=True, max_digits=5, decimal_places=2)
     transaction_details = serializers.SerializerMethodField('top_up_amount')
