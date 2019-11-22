@@ -6,3 +6,5 @@
 1. [Register](test_4_register.md)
 1. [Top Up](test_5_top_up.md)
 1. [Logout](test_6_logout.md)
+
+Tests are completed using Postman and Django Admin
