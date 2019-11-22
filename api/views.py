@@ -4,14 +4,14 @@ from users.models import Employee
 from . import serializers
 
 
-class RetrieveEmployee(generics.RetrieveAPIView):
+class RetrieveEmployeeView(generics.RetrieveAPIView):
     queryset = Employee.objects.all()
-    serializer_class = serializers.EmployeeSerializer
+    serializer_class = serializers.EmployeeNameSerializer
     lookup_field = 'card_id'
     permission_classes = [AllowAny]
 
 
-class TopUpBalance(generics.UpdateAPIView):
+class TopUpView(generics.UpdateAPIView):
     queryset = Employee.objects.all()
     serializer_class = serializers.TopUpSerializer
     lookup_field = 'id'
