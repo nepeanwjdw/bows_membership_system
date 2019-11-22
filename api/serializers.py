@@ -2,21 +2,30 @@ from rest_framework import serializers
 from users.models import Employee
 from transactions.models import Transaction
 from rest_auth.serializers import LoginSerializer
+import re
 
 
 class EmployeeNameSerializer(serializers.ModelSerializer):
     class Meta:
         fields = ('id', 'first_name', 'last_name')
         model = Employee
-        extra_kwargs = {'password': {'write_only': True}}
+
+
+class EmployeeRegisterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Employee
+        fields = ('id', 'first_name', 'last_name', 'email', 'mobile_number', 'password')
+        password = serializers.CharField(write_only=True)
 
     def create(self, validated_data):
+        request_path = self.context['request'].META['PATH_INFO']
+        regex = "[a-zA-Z0-9]{16}"
+        card_id = re.findall(regex, request_path)
         password = validated_data.pop('password')
         user = Employee(**validated_data)
+        user.card_id = card_id[0]
         user.set_password(password)
         user.save()
-        Employee.objects.create(user=user)
-
         return user
 
 

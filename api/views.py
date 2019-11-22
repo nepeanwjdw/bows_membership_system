@@ -11,6 +11,12 @@ class RetrieveEmployeeView(generics.RetrieveAPIView):
     permission_classes = [AllowAny]
 
 
+class RegisterEmployeeView(generics.CreateAPIView):
+    queryset = Employee.objects.all()
+    serializer_class = serializers.EmployeeRegisterSerializer
+    permission_classes = [AllowAny]
+
+
 class TopUpView(generics.UpdateAPIView):
     queryset = Employee.objects.all()
     serializer_class = serializers.TopUpSerializer
