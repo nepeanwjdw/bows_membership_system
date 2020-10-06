@@ -9,11 +9,14 @@ https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Connect to the auto-generated database: `psql postgres`
 1. Create a user for django to access the database: `CREATE USER bows_owner WITH PASSWORD 'postgres';`
 1. Create the database: `CREATE DATABASE bows_db WITH OWNER bows_owner;`
+1. Quit psql `\q`
 #### Download the Application
 1. Run `git clone <enter repo here>`
 #### Setup Pipenv and Run the Application
 1. Install pipenv: `brew install pipenv`
-1. install the last successful environment recorded: `pipenv install --ignore-pipfile`
+1. Install the last successful environment recorded: `pipenv install --ignore-pipfile`
+1. Activate the virtual environment `pipenv shell`
+1. Setup the database structure `python manage.py migrate`
 1. If deploying locally, run the development server: `python manage.py runserver`
 ## APIs
 The below shows a catalogue of API endpoints available to call.
